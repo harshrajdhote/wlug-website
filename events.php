@@ -22,19 +22,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Introducing Lollipop, a sweet new take on Android.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <title>WLUG</title>
+    <title>Events</title>
 
     <!-- Page styles -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Reem+Kufi" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
-
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">  
     <style>
     #view-source {
       position: fixed;
@@ -51,6 +46,115 @@
     background-size: cover;
     height: 600px;
 }
+
+:root{
+  --background-dark: #2d3548;
+  --text-light: rgba(255,255,255,0.6);
+  --text-lighter: rgba(255,255,255,0.9);
+  --spacing-s: 8px;
+  --spacing-m: 16px;
+  --spacing-l: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 64px;
+  --width-container: 1200px;
+}
+ 
+*{
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ 
+html{
+  height: 100%;
+  font-family: 'Reem Kufi', sans-serif;
+  font-size: 16px;
+}
+ 
+body{
+  height: 100%;
+}
+
+.hero-section{
+  align-items: flex-start;
+  display: flex;
+  min-height: 100%;
+  justify-content: center;
+  padding: var(--spacing-xxl) var(--spacing-l);
+}
+ 
+.cgrid{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-column-gap: var(--spacing-l);
+  grid-row-gap: var(--spacing-l);
+  max-width: var(--width-container);
+  width: 100%;
+}
+ 
+@media(min-width: 540px){
+  .cgrid{
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+ 
+@media(min-width: 960px){
+  .cgrid{
+    grid-template-columns: repeat(4, 1fr); 
+  }
+}
+ 
+.card{
+  list-style: none;
+  position: relative;
+  padding-bottom:60px;
+}
+ 
+.card:before{
+  content: '';
+  display: block;
+  padding-bottom: 150%;
+  width: 100%;
+}
+ 
+.cardbg{
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--spacing-l);
+  bottom: 0;
+  filter: brightness(0.75) saturate(1.2) contrast(0.85);
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform-origin: center;
+  trsnsform: scale(1) translateZ(0);
+  transition: 
+    filter 200ms linear,
+    transform 200ms linear;
+}
+ 
+.card:hover .cardbg{
+  transform: scale(1.10) translateZ(0);
+}
+ 
+.ccontent{
+  left: 0;
+  padding: var(--spacing-l);
+  position: absolute;
+  top: 0;
+}
+ 
+ 
+.textcard{
+  color: var(--text-lighter);
+  font-size: 1.9rem;
+  text-shadow: 2px 2px 20px rgba(0,0,0,0.2);
+  line-height: 1.4;
+  word-spacing: 100vw;
+}
+
     </style>
   </head>
   <body>
@@ -66,30 +170,9 @@
           
           <!-- Navigation -->
           <div class="android-navigation-container">
-            <nav class="android-navigation mdl-navigation">
-              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Home</a>
-              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Events</a>
-              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Club Service</a>
-              
-                
-                <a id="demo-menu-lower-left"
-            class="mdl-navigation__link mdl-typography--text-uppercase ">
-      Members
-    </a>
-    
-    <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
-        for="demo-menu-lower-left">
-      <li class="mdl-menu__item">Mentors</li>
-        <li class="mdl-menu__item">Main Board</li>
-        <li class="mdl-menu__item">Asst. Board</li>
-      <li class="mdl-menu__item ">Member</li>
-      
-    </ul>
-                
-              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Gallery</a>
-              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Contact</a>
-              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Login</a>
-            </nav>
+            <?php
+            include 'header.html';
+            ?>
           </div>
           <span class="android-mobile-title mdl-layout-title">
             <img class="android-logo-image" src="./images/wluglogo.png">
@@ -102,34 +185,47 @@
         <span class="mdl-layout-title">
           <img class="android-logo-image" src="./images/wluglogo.png">
         </span>
-        <nav class="mdl-navigation">
-          <a class="mdl-navigation__link" href="">Home</a>
-          <a class="mdl-navigation__link" href="">Events</a>
-          <a class="mdl-navigation__link" href="">Club Service</a>
-         
-             <div class="android-drawer-separator"></div>
-             <Span class="mdl-navigation__link" href="">Members</Span>
-          
-          <a class="mdl-navigation__link" href="">Mentor Board</a>
-          <a class="mdl-navigation__link" href="">Main Board</a>
-          <a class="mdl-navigation__link" href="">Asst. Board</a>
-          <a class="mdl-navigation__link" href="">Member</a>
-          <a class="mdl-navigation__link" href="">Gallery</a>
-          <a class="mdl-navigation__link" href="">Contact</a>
-          <a class="mdl-navigation__link" href="">Login</a>
-         
-          
-        </nav>
+       <?php
+       include 'mob_header.html'
+       ?>
       </div>
 
       <div class="android-content mdl-layout__content">
         <a name="top"></a>
       
       
-        <div class="android-customized-section">
+        <!-- <div class="android-customized-section"> -->
+         <section class="hero-section">
+  <div class="cgrid">
+    <a class="card" href="open-source-day.php">
+      <div class="cardbg" style="background-image: url(https://images.pexels.com/photos/1372972/pexels-photo-1372972.jpeg?cs=srgb&dl=close-up-coffee-contemporary-1372972.jpg&fm=jpg)"></div>
+      <div class="ccontent">
+        <h3 class="textcard">Open Source Day</h3>
+      </div>
+    </a>
+    <a class="card" href="metamorphosis.php">
+      <div class="cardbg" style="background-image: url(https://images.pexels.com/photos/943096/pexels-photo-943096.jpeg?cs=srgb&dl=code-coding-connection-943096.jpg&fm=jpg)"></div>
+      <div class="ccontent">
+        <h3 class="textcard">Metamorphosis</h3>
+      </div>
+    </a>
+    <a class="card" href="spandan.php">
+      <div class="cardbg" style="background-image: url(https://images.pexels.com/photos/218717/pexels-photo-218717.jpeg?cs=srgb&dl=blur-close-up-connection-218717.jpg&fm=jpg)"></div>
+      <div class="ccontent">
+        <h3 class="textcard">Spandan</h3>
+      </div>
+    </li>
+    <a class="card" href="techno-tweet.php">
+      <div class="cardbg" style="background-image: url(https://images.pexels.com/photos/821749/pexels-photo-821749.jpeg?cs=srgb&dl=camera-close-up-device-821749.jpg&fm=jpg)"></div>
+      <div class="ccontent">
+        <h3 class="textcard">Techno-Tweet</h3>
+      </div>
+    </a>
+  <div>
+</section>
+
          
-          <div class="android-customized-section-image"></div>
-        </div>
+        <!-- </div> -->
         <div class="android-more-section">
           <div class="android-section-title mdl-typography--display-1-color-contrast">Recent Activities</div>
           <div class="android-card-container mdl-grid">
@@ -206,58 +302,15 @@
             </div>
           </div>
         </div>
-         
-        <footer class="android-footer mdl-mega-footer">
-          <div class="mdl-mega-footer--top-section">
-            <div class="mdl-mega-footer--left-section">
-              <button class="mdl-mega-footer--social-btn"></button>
-              &nbsp;
-              <button class="mdl-mega-footer--social-btn"></button>
-              &nbsp;
-              <button class="mdl-mega-footer--social-btn"></button>
-            </div>
-            <div class="mdl-mega-footer--right-section">
-              <a class="mdl-typography--font-light" href="#top">
-                Back to Top
-                <i class="material-icons">expand_less</i>
-              </a>
-            </div>
-          </div>
 
-          <div class="mdl-mega-footer--middle-section">
-            <p class="mdl-typography--font-light">Satellite imagery: © 2014 Astrium, DigitalGlobe</p>
-            <p class="mdl-typography--font-light">Some features and devices may not be available in all areas</p>
-          </div>
+       
+       <?php
+       include 'footer.php';
+       ?>
 
-          <div class="mdl-mega-footer--bottom-section">
-            <a class="android-link android-link-menu mdl-typography--font-light" id="version-dropdown">
-              Versions
-              <i class="material-icons">arrow_drop_up</i>
-            </a>
-            <ul class="mdl-menu mdl-js-menu mdl-menu--top-left mdl-js-ripple-effect" for="version-dropdown">
-              <li class="mdl-menu__item">5.0 Lollipop</li>
-              <li class="mdl-menu__item">4.4 KitKat</li>
-              <li class="mdl-menu__item">4.3 Jelly Bean</li>
-              <li class="mdl-menu__item">Android History</li>
-            </ul>
-            <a class="android-link android-link-menu mdl-typography--font-light" id="developers-dropdown">
-              For Developers
-              <i class="material-icons">arrow_drop_up</i>
-            </a>
-            <ul class="mdl-menu mdl-js-menu mdl-menu--top-left mdl-js-ripple-effect" for="developers-dropdown">
-              <li class="mdl-menu__item">App developer resources</li>
-              <li class="mdl-menu__item">Android Open Source Project</li>
-              <li class="mdl-menu__item">Android SDK</li>
-              <li class="mdl-menu__item">Android for Work</li>
-            </ul>
-            <a class="android-link mdl-typography--font-light" href="">Blog</a>
-            <a class="android-link mdl-typography--font-light" href="">Privacy Policy</a>
-          </div>
-
-        </footer>
       </div>
     </div>
-    <a href="" target="_blank" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast">Feedback</a>
+    <!-- <a href="" target="_blank" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast">Feedback</a> -->
     <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
   </body>
 </html>

@@ -7,17 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>WLUG | Gallery</title>
+    
+     <!---new    added from index-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
     <link rel="stylesheet" href="./css/thumbnail-gallery.css">
 
-    <!---new    added from index-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.min.css">
-    <link rel="stylesheet" href="./css/styles.css">
+   
 
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -28,7 +30,9 @@
   top: 0;
   width: 100%;
 }
+    a:hover {
     
+    }
     </style>
 </head>
 <body>
@@ -50,30 +54,9 @@
                 
                 <!-- Navigation -->
                 <div class="android-navigation-container">
-                  <nav class="android-navigation mdl-navigation">
-                    <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Home</a>
-                    <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Events</a>
-                    <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Club Service</a>
-                    
-                      
-                      <a id="demo-menu-lower-left"
-                  class="mdl-navigation__link mdl-typography--text-uppercase ">
-            Members
-          </a>
-          
-          <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
-              for="demo-menu-lower-left">
-            <li class="mdl-menu__item">Mentors</li>
-              <li class="mdl-menu__item">Main Board</li>
-              <li class="mdl-menu__item">Asst. Board</li>
-            <li class="mdl-menu__item ">Member</li>
-            
-          </ul>
-                      
-                    <a class="mdl-navigation__link mdl-typography--text-uppercase" href="" >Gallery</a>
-                    <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Contact</a>
-                    <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Login</a>
-                  </nav>
+                 <?php
+                include'header.html'
+                    ?>
                 </div>
                 <span class="android-mobile-title mdl-layout-title">
                   <img class="android-logo-image" src="./images/wluglogo.png">
@@ -86,24 +69,9 @@
               <span class="mdl-layout-title">
                 <img class="android-logo-image" src="./images/wluglogo.png">
               </span>
-              <nav class="mdl-navigation">
-                <a class="mdl-navigation__link" href="">Home</a>
-                <a class="mdl-navigation__link" href="">Events</a>
-                <a class="mdl-navigation__link" href="">Club Service</a>
-               
-                   <div class="android-drawer-separator"></div>
-                   <Span class="mdl-navigation__link" href="">Members</Span>
-                
-                <a class="mdl-navigation__link" href="">Mentor Board</a>
-                <a class="mdl-navigation__link" href="">Main Board</a>
-                <a class="mdl-navigation__link" href="">Asst. Board</a>
-                <a class="mdl-navigation__link" href="">Member</a>
-                <a class="mdl-navigation__link" href="">Gallery</a>
-                <a class="mdl-navigation__link" href="">Contact</a>
-                <a class="mdl-navigation__link" href="">Login</a>
-               
-                
-              </nav>
+              <?php
+                include'mob_header.html'
+                    ?>
             </div>
         <div class="android-content mdl-layout__content">
             <div class="container gallery-container">
@@ -122,10 +90,7 @@
                     <a class="lightbox" href="./images/park.jpg">
                         <img src="./images/park.jpg" alt="Park">
                     </a>
-                    <div class="caption">
-                        <h3>Thumbnail label</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
+                   
                 </div>
             </div>
             <div class="col-sm-6 col-md-4">
@@ -133,10 +98,7 @@
                     <a class="lightbox" href="./images/bridge.jpg">
                         <img src="./images/bridge.jpg" alt="Bridge">
                     </a>
-                    <div class="caption">
-                        <h3>Thumbnail label</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
+                    
                 </div>
             </div>
             <div class="col-sm-6 col-md-4">
@@ -144,10 +106,7 @@
                     <a class="lightbox" href="./images/tunnel.jpg">
                         <img src="./images/tunnel.jpg" alt="Tunnel">
                     </a>
-                    <div class="caption">
-                        <h3>Thumbnail label</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
+                  
                 </div>
             </div>
             <div class="col-sm-6 col-md-4">
@@ -155,10 +114,7 @@
                     <a class="lightbox" href="./images/coast.jpg">
                         <img src="./images/coast.jpg" alt="Coast">
                     </a>
-                    <div class="caption">
-                        <h3>Thumbnail label</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
+                    
                 </div>
             </div>
             <div class="col-sm-6 col-md-4">
@@ -166,10 +122,7 @@
                     <a class="lightbox" href="./images/rails.jpg">
                         <img src="./images/rails.jpg" alt="Rails">
                     </a>
-                    <div class="caption">
-                        <h3>Thumbnail label</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
+                    
                 </div>
             </div>
             <div class="col-sm-6 col-md-4">
@@ -177,10 +130,7 @@
                     <a class="lightbox" href="./images/traffic.jpg">
                         <img src="./images/traffic.jpg" alt="Traffic">
                     </a>
-                    <div class="caption">
-                        <h3>Thumbnail label</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
+                    
                 </div>
             </div>
         </div>
