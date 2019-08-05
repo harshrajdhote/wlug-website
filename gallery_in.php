@@ -85,53 +85,37 @@
 
         <div class="row">
 
-            <div class="col-sm-6 col-md-4">
-                <div class="thumbnail">
-                    <a class="lightbox" href="./images/park.jpg">
-                        <img src="./images/park.jpg" alt="Park">
-                    </a>
+          
+           
+
+            
+           
+            
+            
+                
+                    
+                       
+                    
+                     <?php
+                    $db = mysqli_connect("localhost", "root", "", "wlug");
+                    $result = mysqli_query($db, "SELECT * FROM gallery where category ='".$_GET['cat']."'");
                    
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <div class="thumbnail">
-                    <a class="lightbox" href="./images/bridge.jpg">
-                        <img src="./images/bridge.jpg" alt="Bridge">
-                    </a>
-                    
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <div class="thumbnail">
-                    <a class="lightbox" href="./images/tunnel.jpg">
-                        <img src="./images/tunnel.jpg" alt="Tunnel">
-                    </a>
-                  
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <div class="thumbnail">
-                    <a class="lightbox" href="./images/coast.jpg">
-                        <img src="./images/coast.jpg" alt="Coast">
-                    </a>
-                    
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <div class="thumbnail">
-                    <a class="lightbox" href="./images/rails.jpg">
-                        <img src="./images/rails.jpg" alt="Rails">
-                    </a>
-                    
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <div class="thumbnail">
-                    <a class="lightbox" href="./images/traffic.jpg">
-                        <img src="./images/traffic.jpg" alt="Traffic">
-                    </a>
-                    
-                </div>
+    while ($row = mysqli_fetch_array($result)) {
+      
+             echo "<div class='col-sm-6 col-md-4'>";
+      echo "<div class='thumbnail'>";
+        echo "<a class='lightbox' href='http://localhost/wlug_new/images/original/".$row['img_org']."'>";
+      	echo "<img src='http://localhost/wlug_new/images/compressed/".$row['img_org']."' >";
+      	echo "</a>";
+      echo "</div>";
+       
+            echo"</div>";
+       
+            //echo $i++;
+        
+    }
+  ?>
+                
             </div>
         </div>
 

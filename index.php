@@ -60,30 +60,9 @@
           
           <!-- Navigation -->
           <div class="android-navigation-container">
-            <nav class="android-navigation mdl-navigation">
-              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="index.php">Home</a>
-              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="events.php">Events</a>
-              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="clubservice.php">Club Service</a>
-              
-                
-                <a id="demo-menu-lower-left"
-            class="mdl-navigation__link mdl-typography--text-uppercase ">
-      Members
-    </a>
-    
-    <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
-        for="demo-menu-lower-left">
-      <li class="mdl-menu__item">Mentors</li>
-        <li class="mdl-menu__item">Main Board</li>
-        <li class="mdl-menu__item">Asst. Board</li>
-      <li class="mdl-menu__item ">Member</li>
-      
-    </ul>
-                
-              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Gallery</a>
-              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Contact</a>
-              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Login</a>
-            </nav>
+           <?php
+              include 'header.html'
+                  ?>
           </div>
           <span class="android-mobile-title mdl-layout-title">
             <img class="android-logo-image" src="./images/wluglogo.png">
@@ -96,24 +75,9 @@
         <span class="mdl-layout-title">
           <img class="android-logo-image" src="./images/wluglogo.png">
         </span>
-        <nav class="mdl-navigation">
-          <a class="mdl-navigation__link" href="">Home</a>
-          <a class="mdl-navigation__link" href="">Events</a>
-          <a class="mdl-navigation__link" href="">Club Service</a>
-         
-             <div class="android-drawer-separator"></div>
-             <Span class="mdl-navigation__link" href="">Members</Span>
-          
-          <a class="mdl-navigation__link" href="">Mentor Board</a>
-          <a class="mdl-navigation__link" href="">Main Board</a>
-          <a class="mdl-navigation__link" href="">Asst. Board</a>
-          <a class="mdl-navigation__link" href="">Member</a>
-          <a class="mdl-navigation__link" href="">Gallery</a>
-          <a class="mdl-navigation__link" href="">Contact</a>
-          <a class="mdl-navigation__link" href="">Login</a>
-         
-          
-        </nav>
+       <?php
+                  include'mob_header.html'
+                  ?>
       </div>
 
       <div class="android-content mdl-layout__content">
@@ -204,7 +168,8 @@
         
         <?php
         include 'teachers.php';
-        ?>
+        ?> 
+
 
         <footer class="android-footer mdl-mega-footer">
           <div class="mdl-mega-footer--top-section">
