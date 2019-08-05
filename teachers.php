@@ -36,15 +36,15 @@ p{
 
 <div class="card">
   <img src="./images/aj.png" style="width:100%">
-  <h4>John Doe</h4>
+  <h4>Dr. A. J. Umbarkar</h4>
   <p class="title">Staff Advisor</p>
   <p>Walchand College of Engineering, Sangli</p>
   
 </div>
 
 <div class="card">
-  <img src="./images/surve.png" alt="John" style="width:100%">
-  <h4>John Doe</h4>
+  <img src="./images/surve.png" style="width:100%">
+  <h4>Prof. A. R. Surve</h4>
   <p class="title">Staff Advisor</p>
   <p>Walchand College of Engineering, Sangli</p>
 </div>

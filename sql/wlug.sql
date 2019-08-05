@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 04, 2019 at 03:31 PM
+-- Generation Time: Aug 05, 2019 at 01:29 PM
 -- Server version: 10.1.29-MariaDB
 -- PHP Version: 7.2.0
 
@@ -54,9 +54,16 @@ CREATE TABLE `feedback` (
 CREATE TABLE `gallery` (
   `img_id` int(3) NOT NULL,
   `category` varchar(20) NOT NULL,
-  `img_com` mediumblob NOT NULL,
-  `img_org` mediumblob NOT NULL
+  `img_org` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `gallery`
+--
+
+INSERT INTO `gallery` (`img_id`, `category`, `img_org`) VALUES
+(20, '', 'IMG-20190215-WA0011.jpg'),
+(21, 'metamorphosis', 'IMG-20190215-WA0007.jpg');
 
 -- --------------------------------------------------------
 
@@ -95,7 +102,7 @@ ALTER TABLE `gallery`
 -- AUTO_INCREMENT for table `gallery`
 --
 ALTER TABLE `gallery`
-  MODIFY `img_id` int(3) NOT NULL AUTO_INCREMENT;
+  MODIFY `img_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
