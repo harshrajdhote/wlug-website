@@ -26,6 +26,7 @@
 
     <!-- Page styles -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+      <link href='https://fonts.googleapis.com/css?family=Exo' rel='stylesheet'>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.min.css">
     <link rel="stylesheet" href="./css/styles.css">
@@ -40,11 +41,64 @@
       z-index: 900;
     }
         .android-customized-section-image {
-    background: url('images/wlug-logo.png') center top no-repeat;
-        background-size: auto;
-    background-size: cover;
-    height: 600px;
+    margin: 0;
+    margin-top: -15px;
+	width: 100%;
+	height: 100vh;
+	font-family: "Exo", sans-serif;
+	color: #fff;
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradientBG 15s ease infinite;
+        
 }
+        @keyframes gradientBG {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+        #center_style{
+            
+              font-family: 'Exo';padding-top:45.5%;
+            text-align:center;
+        }
+        @media only screen and (min-width: 600px) {
+        #center_style{
+            
+              font-family: 'Exo';padding-top:30.5%;
+            text-align:center;
+        }
+        }
+        @media only screen and (min-width: 768px) {
+        #center_style{
+            
+              font-family: 'Exo';padding-top:10.5%;
+            text-align:center;
+        }
+        }
+        
+h1 {
+	font-weight: 300;
+	font-size:6.6vw;
+}
+
+h3 {
+	color: #eee;
+	font-weight: 100;
+	font-size:3vw;
+}
+
+h5 {
+	color:#eee;
+	font-weight:300;
+}
+
     </style>
   </head>
   <body>
@@ -86,7 +140,8 @@
       
         <div class="android-customized-section">
          
-          <div class="android-customized-section-image"></div>
+          <div class="android-customized-section-image"> <h1 id = "center_style">Walchand Linux Users' Group</h1>
+	<h3>KNOWLEDGE | COMMUNITY | SHARE </h3> </div>
         </div>
         <div class="android-more-section">
           <div class="android-section-title mdl-typography--display-1-color-contrast">Recent Activities</div>
