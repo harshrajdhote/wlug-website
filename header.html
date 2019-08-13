@@ -1,24 +1,29 @@
   <nav class="android-navigation mdl-navigation">
-                    <a class="mdl-navigation__link mdl-typography--text-uppercase" href="./index.php">Home</a>
-                    <a class="mdl-navigation__link mdl-typography--text-uppercase" href="./events.php">Events</a>
-                    <a class="mdl-navigation__link mdl-typography--text-uppercase" href="./clubservice.php">Club Service</a>
+                    <div class="mdl-navigation__link mdl-typography--text-uppercase" onclick="location.replace('index.php')">Home</div>
+                    <div class="mdl-navigation__link mdl-typography--text-uppercase" onclick="location.replace('events.php')">Events</div>
+                    <div class="mdl-navigation__link mdl-typography--text-uppercase" onclick="location.replace('clubservice.php')">Club Service</div>
                     
                       
-                      <a id="demo-menu-lower-left"
+                      <div id="demo-menu-lower-left"
                   class="mdl-navigation__link mdl-typography--text-uppercase ">
             Members
-          </a>
+          </div>
           
           <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
               for="demo-menu-lower-left">
-            <li class="mdl-menu__item">Mentors</li>
-              <li class="mdl-menu__item">Main Board</li>
-              <li class="mdl-menu__item">Asst. Board</li>
-            <li class="mdl-menu__item ">Member</li>
+              <style>
+              li a : hover{
+              text-decoration:none;
+              }
+                  </style>
+              <li class="mdl-menu__item"><div onclick="location.replace('members.php?cat=mentor')">Mentors</div></li>
+              <li class="mdl-menu__item"><div onclick="location.replace('members.php?cat=main')">Main Board</div></li>
+              <li class="mdl-menu__item"><div onclick="location.replace('members.php?cat=assistent')">Asst. Board</div></li>
+              <li class="mdl-menu__item"><div onclick="location.replace('members.php?cat=member')">Member</div></li>
             
           </ul>
                       
-                    <a class="mdl-navigation__link mdl-typography--text-uppercase" href="gallery.php" >Gallery</a>
-                    <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Contact</a>
-                    <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Login</a>
+                    <div class="mdl-navigation__link mdl-typography--text-uppercase" onclick="location.replace('gallery.php')" >Gallery</div>
+                    <div class="mdl-navigation__link mdl-typography--text-uppercase" onclick="location.replace('')">Contact</div>
+                     <div class="mdl-navigation__link mdl-typography--text-uppercase" onclick="location.replace('')">login</div>
                   </nav>

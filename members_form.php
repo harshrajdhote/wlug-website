@@ -1,7 +1,10 @@
-<!DOCTYPE html>
-<html>
-<style>
-input[type=text], select {
+<html lang="en">
+<head>
+    <title>Simple Form with image upload preview using PHP and Mysql</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+    <style>
+        
+        input[type=text], select {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -31,97 +34,167 @@ div {
   background-color: #f2f2f2;
   padding: 20px;
 }
-</style>
+    </style>
+    
+</head>
 <body>
 
+        <form action="members_form.php" method="post" enctype="multipart/form-data">
+            
+            
+            <lable align="right">Board</lable>
+            <select name ="board" >
+            <option value = "mentor">Mentor Board</option>
+                <option value = "main">Main Board</option>
+                <option value="Assistent">Assistant Board</option>
+                <option value="Member">Member</option>
+  	         </select>
+            
+            
+            <lable align="right">Name:</lable>
+            <input type="text" name="name" required/><br>
 
-<div>
-  <form enctype ="multipart/form-data" method="post" action="members_form.php">
-  	Board 
-  	<select name="board" required>
-    
-    <option value="mentor">Mentor Board</option>
-    <option  value="main">Main Board</option>
-    <option value="assistant">Assistant Board</option>
-    <option value="member">Member</option>
-  	</select>
-  
-  
-    <label for="fname">Name</label>
-    <input type="text" id="name" name="name" placeholder="Your name..">
-	Post
-    <select name="Post" required>
-    <option value="President">President</option>
-    <option value="Vice President">Vice President</option>
-    <option value="Secretary">Secretary</option>
-    <option value="Program Director">Program Director</option>
-    <option value="Club Service Director">Club Service Director</option>
-    <option value="Art Director">Art Director</option>
-    <option value="Revenue Manager">Revenue Manager</option>
-    <option value="Technical Advisor">Technical Advisor</option>
-    <option value="Editor">Editor</option>
-    <option value="Aptitude Head">Aptitude Head</option>
-    <option value="Developer">Developer</option>
-    <option value="Members">Member</option>
-  	</select>
-      
-      
-    Thought
-    <input name="thought" type="text" placeholder="Thought(Limit 80 Char)">
-      
-    Area of Interest
-    <input name="AOI" type="text" placeholder="Area of Interest">
-    
-    Mobile No.
-    <input name ="contact" type="text" placeholder="10 Digits only" >
-    Facebook Profile Link(Enter as shown in Placeholder)
-    <input name = "fb" type="text" placeholder="https://www.facebook.com/sanket.pathak2">
-    Email
-    <input name ="email" type="text" placeholder="Email" >
-    Linkedin Profile Link(Enter as shown in Placeholder)
-    <input name="linked_in" type="text" placeholder="https://www.linkedin.com/in/sanket-pathak-9aa116171">
-    Photo(name photo as name_post eg. sanket_developer
-<!--    <input name="pic" type="file" required />-->
-      
-    
-  
-    <input type="submit" name = 'upload' />
-  </form>
-    
-    
+            <lable align="right">POST</lable>
+            <select name = "post" >
+            <option value = "President">President</option>
+                <option value = "Vice President">Vice President</option>
+                <option value="Secretary">Secretary</option>
+                <option value="Program Director">Program Director</option>
+                <option value="Club Service Director">Club Service Director</option>
+                <option value="Art Director">Art Director</option>
+                <option value="Revenue Manager">Revenue Manager</option>
+                <option value="Technical Advisor">Technical Advisor</option>
+                <option value="Editor">Editor</option>
+                <option value="Aptitude Head">Aptitude Head</option>
+                <option value="Developer">Developer</option>
+                <option value="Members">Member</option>
+  	         </select>
+            
+             <lable align="right">Thought</lable>
+            <input type="text" name="thought" required/><br>
+            
+            
+            <lable align="right">AOI</lable>
+            <input type="text" name="AOI" required/><br>
+                            
+            
+            
+             Mobile No.
+            <input name ="contact" type="text" placeholder="10 Digits only" required>
+            
+            
+            Facebook Profile Link(Enter as shown in Placeholder)
+                        <input name = "fb" type="text" placeholder="https://www.facebook.com/sanket.pathak2">
+                    
+            <lable align="right">Email:</lable>
+            <input type="text" name="email" required/><br>
+            
+            <lable align="right">Linkedin</lable>
+            <input type="text" name="linkedin" required/><br>
+            
+            
+            
+            <lable align="right">Image:</lable>  <br>                          
+            <input type="file" name = "pic">
+                            
+                            
+            
+                           
+                        
+                            <input type="submit" name="register" value="submit" />
+                                     
+
+        </form>
     
     <?php
-    $db = mysqli_connect("localhost", "root", "", "wlug");
-    if (isset($_POST['upload'])) {
-  	// Get image name
-        extract($_POST);
-//  	$pic = $_FILES['pic']['name'];
+    
+    
+   include 'databaseconnect.php';
+    
+    
+//    if (isset($_POST['upload'])) {
+//  	// Get image name
+//        extract($_FILES);
+//  	$image_original = $_FILES['pic']['name'];
 //      //$image_compressed = $_FILES['image_compressed']['name'];
 //  	// Get text
 //  	
-//   echo "".print_r($_GET);
-//  	// image file directory
-//  	$target_original = "./images/members/".basename($pic);
+//   
+////  	image file directory
+//  	//$target_original = "./images/members/".basename($image_original);
 //    //$target_compressed = "./../images/compressed".basename($image);  
-//    $sql = "INSERT INTO gallery VALUES ('meta','ad')";
-//  	
+//        //$board=$_POST['board'];
+//        $name=$_POST['name'];
+//        //$Post=$_POST['Post'];
+//        //$thought=$_POST['thought'];    
+//        $AOI=$_POST['AOI'];
+//        $contact=$_POST['contact'];
+//        $fb=$_POST['fb'];
+//        $email=$_POST['email'];
+//        $linked_in=$_POST['linked_in'];
+////            $sql = "INSERT INTO members (id,category,name,post,thought,AOI,contact_no,fb,gmail,linked_in,pic) VALUES ('$board','$name','$Post',
+////    '$thought','$AOI','$contact','$fb','$email','$linked_in','$pic')";
+//        
+//        
+//        
+//        
+//        $sql = "INSERT INTO members (id,category,name,post,thought,AOI,contact_no,fb,gmail,linked_in,pic) VALUES ('$name','$AOI','$contact','$fb','$email','$linked_in','$pic')";
 //  	// execute query
-        $s = "sd";
-        $d = "sd";
 //  	mysqli_query($db, $sql);
-        mysqli_query($db,"INSERT INTO gallery VALUES ('$s','$d')");
-
-//  	if (move_uploaded_file($_FILES['pic']['tmp_name'], $target_original)) {
-//  		$msg = "Image uploaded successfully";
-//    
+//
+////  	if (move_uploaded_file($_FILES['pic']['tmp_name'], $target_original)) {
+////  		$msg = "Image uploaded successfully";
+////    
+////    }
 //    }
+//    else
+//    {
+//        echo"<script>alert('Failed to upload data')</script>";   
+//    }
+    
+    
+    
+    if(isset($_POST['register']))
+    {
+        $board = $_POST['board'];
+        $email = $_POST['email'];
+        $post = $_POST['post'];
+        $name = $_POST['name'];
+        $contact = $_POST['contact'];
+        $thought = $_POST['thought'];
+        $AOI = $_POST['AOI'];
+        $pic = $_FILES['pic']['name'];
+   $image_tmp = $_FILES['pic']['tmp_name'];
+        $fb = $_POST['fb'];
+        $post = $_POST['post'];
+        $linkedin = $_POST['linkedin'];
+$target_original = "./images/members/".basename($pic);
+
+        if (move_uploaded_file($_FILES['pic']['tmp_name'], $target_original)) {
+  		$msg = "Image uploaded successfully";
+        }
+        //$con = mysqli_connect("localhost","root","","wlug");
+
+        $query = "insert into members(board,name,post,thought,aoi,contact,fb,email,linked_in,img)  values ('$board','$name','$post','$thought','$AOI','$contact','$fb','$email','$linkedin','$pic')";
+
+        $result = mysqli_query($db,$query) or die(mysqli_error($db));
+        
+//        $res = "select";
+        //echo "";
+
+        if($result=== TRUE)
+        {       
+
+        echo "successfully uploaded";
+        
+        }
+        else {       
+
+        echo "upload Failed";
+
+             }
     }
-    
-    
-    
-    
 ?>    
-</div>
 
 </body>
 </html>

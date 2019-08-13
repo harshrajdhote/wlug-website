@@ -52,9 +52,9 @@
   height: 100vh;
   font-family: "Exo", sans-serif;
   color: #fff;
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-  background-size: 400% 400%;
-  animation: gradientBG 15s ease infinite;
+//  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  //background-size: 400% 400%;
+  //animation: gradientBG 15s ease infinite;
 }
 
 @keyframes gradientBG {
@@ -203,13 +203,13 @@ padding: 10px;
 }
     </style>
     <?php
-    $con = mysqli_connect("localhost","root","","wlug");
+   include 'databaseconnect.php';
     $query = "select * from feedback";
-    $result = mysqli_query($con,$query);
+    $result = mysqli_query($db,$query);
     $i = 0;
-    $color = array('#ffcccc','#000080','#666600','#4dc3ff','#bfbfbf','#ff1aff','#ffaa00','#3377ff','#ffff33','#8cff66') ;
+    $color = array('#000080','#666600','#4dc3ff','#bfbfbf','#ff1aff','#ffaa00','#3377ff','#8cff66') ;
     while($row = mysqli_fetch_array($result)){
-           echo "<div class = 'text' style = 'background : ".$color[rand(0,9)]."'><div>".$row['feedback']."</div></div><br>";
+           echo "<div class = 'text' style = 'background : ".$color[rand(0,7)]."'><div>".$row['feedback']."</div></div><br>";
     }
  ?>
   

@@ -6818,51 +6818,66 @@ button.close {
     <div class="tz-gallery">
 
         <div class="row">
+			<div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <a class="lightbox" href="./images/gim.jpg">
+                        <img src="./images/gim.jpg" alt="Coast">
+                    </a>
+                    <div class="caption">
+                        <h3>General Interest Meet</h3>
+                        <p>This is organized specially for First year students,includes overall introduction to club,technical and
+                                non technical staff.The main session conducted here is of Hacking.</p>
+                    </div>
+                </div>
+            </div>
+			
+			
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <a class="lightbox" href="./images/OSDAY.png">
+                        <img src="./images/OSDAY.png" alt="Park">
+                    </a>
+                    <div class="caption">
+                        <h3>Open Source Day</h3>
+                        <p>This is 1st event of WLUG,which is contribution totally to open source.Open source softwares are introduced and taught,like Blender,Arduino,Gitlab,etc</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <a class="lightbox" href="./images/metamorphosis.png">
+                        <img src="./images/metamorphosis.png" alt="Bridge">
+                    </a>
+                    <div class="caption">
+                        <h3>Metamorphosis</h3>
+                        <p>This is 2nd event of Walchand Linux Users' Group which is held in October.In this we take into three technologies i.e. Python, Shell and Docker.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <a class="lightbox" href="./images/spandan.png">
+                        <img src="./images/spandan.png" alt="Tunnel">
+                    </a>
+                    <div class="caption">
+                        <h3>Spandan</h3>
+                        <p>This is the 3rd event of WLUG.It is Non-Technical,Social event of WLUG,contributed to Society,which is mainly to spend a day at orphange,nab or handicap home.</p>
+                    </div>
+                </div>
+            </div>
 
             <div class="col-sm-6 col-md-4">
                 <div class="thumbnail">
-                    <a class="lightbox" href="./images/park.jpg">
-                        <img src="./images/park.jpg" alt="Park">
+                    <a class="lightbox" href="./images/tecno.png">
+                        <img src="./images/tecno.png" alt="Coast">
                     </a>
                     <div class="caption">
-                        <h3>Thumbnail label</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <h3>Techno-Tweet</h3>
+                        <p>It is 4th event of WLUG.which is held in March.It is divided into two parts i.e Web Development and Android apps Development.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6 col-md-4">
-                <div class="thumbnail">
-                    <a class="lightbox" href="./images/bridge.jpg">
-                        <img src="./images/bridge.jpg" alt="Bridge">
-                    </a>
-                    <div class="caption">
-                        <h3>Thumbnail label</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <div class="thumbnail">
-                    <a class="lightbox" href="./images/tunnel.jpg">
-                        <img src="./images/tunnel.jpg" alt="Tunnel">
-                    </a>
-                    <div class="caption">
-                        <h3>Thumbnail label</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <div class="thumbnail">
-                    <a class="lightbox" href="./images/coast.jpg">
-                        <img src="./images/coast.jpg" alt="Coast">
-                    </a>
-                    <div class="caption">
-                        <h3>Thumbnail label</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
-            </div>
+            <!--
             <div class="col-sm-6 col-md-4">
                 <div class="thumbnail">
                     <a class="lightbox" href="./images/rails.jpg">
@@ -6885,6 +6900,7 @@ button.close {
                     </div>
                 </div>
             </div>
+-->
         </div>
 
     </div>

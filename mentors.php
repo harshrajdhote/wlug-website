@@ -20,7 +20,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Walchand Linux Users' Group is a club which promotes open source technologies. WLUG established in 2003, is an active technical club. It is a group formed by open source enthusiastic students to use and promote Linux future and interesting stuff.">
+    <meta name="description" content="Introducing Lollipop, a sweet new take on Android.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <title>WLUG</title>
 
@@ -143,82 +143,47 @@ body{
                                     <div class="android-card-container mdl-grid" style="left-margin:20px;">
             <div style="height:420px;" class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
               <div class="card-container">
-                  
-                  <?php
-                  
-                  $db = mysqli_connect("localhost", "root", "", "wlug");
-
-$result = mysqli_query($db, "SELECT * FROM members where category ='".$_GET['cat']."'");
-
-                  
-                  echo"<script>alert('rows = ".mysqli_num_rows($result)."')</script>";
-                  
-                  
-                  
-                  
-                  
-while ($row = mysqli_fetch_array($result)) {
-//      echo "<div id='img_div'>";
-//      	echo "<img src='../images/original/".$row['img_org']."' >";
-//      	echo "<p>".$row['img_id']."</p>";
-//      echo "</div>";
-    
- 
-                  
-                  
-                  
-                  
-                echo "<div class='card'>";
-                echo "<div class='front'>";
-                        echo "<div class='cover'>";
-                            echo "<img src=images/rotating_card_thumb2.png'/>";
-                           echo "</div>";
-                        echo "<div class='user'>";
-                            echo "<img class='img-circle' src='../images/members/".$row['img']."'/>";
-                           echo "</div>";
-                        echo "<div class='content'>";
-                            echo "<div class='main'>";
-                                echo "<h3 class='name'>".$row['name']."</h3>";
-                                echo "<p class='profession'>".$row['post']."</p>";
-                                echo "<p class='text-center'>".$row['thought']."</p>";
-                               echo "</div>";
-                            echo "<div class='footer'>";
-                                echo "<i class='fa fa-mail-forward'></i> More</div>";
-                           echo "</div>";
-                       echo "</div>";
-                    echo "<div class='back'>";
-                        echo "<div class='header'>";
-                            echo "<h5 class='motto'>COMMUNITY | KNOWLEDGE | SHARE</h5>";
-                           echo "</div>";
-                        echo "<div class='content'>";
-                            echo "<div class='main''>";
-                                echo "<h4 class='text-center'>".$row['post']."</h4>";
-                                echo "<p class='text-center'>".$row['AOI']."</p>";
+                <div class="card">
+                    <div class="front">
+                        <div class="cover">
+                            <img src="images/rotating_card_thumb2.png"/>
+                        </div>
+                        <div class="user">
+                            <img class="img-circle" src="images/rotating_card_profile3.png"/>
+                        </div>
+                        <div class="content">
+                            <div class="main">
+                                <h3 class="name">John Marvel</h3>
+                                <p class="profession">CEO</p>
+                                <p class="text-center">"I'm the new Sinatra, and since I made it here I can make it anywhere, yeah, they love me everywhere"</p>
+                            </div>
+                            <div class="footer">
+                                <i class="fa fa-mail-forward"></i> More
+                            </div>
+                        </div>
+                    </div> <!-- end front panel -->
+                    <div class="back">
+                        <div class="header">
+                            <h5 class="motto">COMMUNITY | KNOWLEDGE | SHARE</h5>
+                        </div>
+                        <div class="content">
+                            <div class="main">
+                                <h4 class="text-center">Job Description</h4>
+                                <p class="text-center">Web design, Adobe Photoshop, HTML5, CSS3, Corel and many others...</p>
 
                                 
 
-                               echo "</div>";
-                        echo "</div>";
-                    
-                    
-                    
-                        echo"<div class='footer''>";
-                            echo "<div class='social-links text-center'>";
-    
-                                echo "<a href='".$row['fb']."' class='facebook'><i class='fa fa-facebook fa-fw'></i></a>";
-                                echo "<a href='mailto:".$row['email']."' target='blank' class='google' onclick='location.replace('mailto:".$row['email']."');'><i class='fa fa-google-plus fa-fw'></i></a>";
-                                echo "<a href='".$row['linked_in']."' class='linkedin'><i class='fa fa-linkedin'></i></a>";
-                            echo "</div>";
-                        echo "</div>";
-                    echo "</div>"; 
-                echo "</div>";
-}
-                  
-                    ?>
-                  
-                  
-                  
-                    <!-- end card -->
+                            </div>
+                        </div>
+                        <div class="footer">
+                            <div class="social-links text-center">
+                                <a href="https://creative-tim.com" class="facebook"><i class="fa fa-facebook fa-fw"></i></a>
+                                <a href="mailto:bharambevaishu@gmail.com" target="blank" class="google" onclick="location.replace('mailto:bharambevaishu@gmail.com');"><i class="fa fa-google-plus fa-fw"></i></a>
+                                <a href="https://creative-tim.com" class="linkedin"><i class="fa fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div> <!-- end back panel -->
+                </div> <!-- end card -->
             </div> <!-- end card-container -->
             </div>
 

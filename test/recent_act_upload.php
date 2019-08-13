@@ -1,33 +1,56 @@
 <?php
   // Create database connection
- include 'databaseconnect.php';
+  include 'databaseconnect.php';
 
   // Initialize message variable
   $msg = "";
+   
 
   // If upload button is clicked ...
   if (isset($_POST['upload'])) {
   	// Get image name
   	$image_original = $_FILES['image_original']['name'];
-      $image_compressed = $_FILES['image_compressed']['name'];
+      //$image_compressed = $_FILES['image_compressed']['name'];
   	// Get text
   	
-   $category = $_POST['category'];
+   $title = $_POST['title'];
+   $content = $_POST['content'];
   	// image file directory
-  	$target_original = "./../images/original".basename($image);
-    $target_compressed = "./../images/compressed".basename($image);  
+  	$target_original = "../images/recent_activities/".basename($image_original);
+    //$target_compressed = "./../images/compressed".basename($image);  
 
-  	$sql = "INSERT INTO gallery (category,img_comp,img_org) VALUES ('$category', '$image_compressed','$image_original')";
+  	$sql = "INSERT INTO recent_activities (title,content,img) VALUES ('$title','$content','$image_original')";
   	// execute query
   	mysqli_query($db, $sql);
 
-  	if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
+  	if (move_uploaded_file($_FILES['image_original']['tmp_name'], $target_original)) {
   		$msg = "Image uploaded successfully";
+//        $im = new Imagick("../images/original/abc.jpg");
+//
+//// Optimize the image layers
+//$im->optimizeImageLayers();
+//
+//// Compression and quality
+//$im->setImageCompression(Imagick::COMPRESSION_JPEG);
+//$im->setImageCompressionQuality(25);
+//
+//// Write the image back
+//$im->writeImages("../images/compressed/abc.jpg", true);
+        
+        
+        
+   
+        
+        
+        
+        
+        
+        
   	}else{
   		$msg = "Failed to upload image";
   	}
   }
-  $result = mysqli_query($db, "SELECT * FROM images");
+  $result = mysqli_query($db, "SELECT * FROM gallery");
 ?>
 <!DOCTYPE html>
 <html>
@@ -67,28 +90,19 @@
 </head>
 <body>
 <div id="content">
-  <?php
-    while ($row = mysqli_fetch_array($result)) {
-      echo "<div id='img_div'>";
-      	echo "<img src='images/".$row['image']."' >";
-      	echo "<p>".$row['image_text']."</p>";
-      echo "</div>";
-    }
-  ?>
-  <form method="POST" action="index.php" enctype="multipart/form-data">
+ 
+  <form method="POST" action="up_comp.php" enctype="multipart/form-data">
   	<input type="hidden" name="size" value="1000000">
+    title :&nbsp;<br>
+    <input type = "textarea" name = "title"><br>
+	content :&nbsp;<br>
+    <input type = "textarea" name = "content"><br>
   	<div>
   	  <input type="file" name="image_original">
-        <input type="file" name="image_compressed">
+
   	</div>
   	<div>
-      <textarea 
-      	id="text" 
-      	cols="40" 
-      	rows="4" 
-      	name="image_text" 
-      	placeholder="category"></textarea>
-  	</div>
+      </div>
   	<div>
   		<button type="submit" name="upload">POST</button>
   	</div>

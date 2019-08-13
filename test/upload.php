@@ -4,14 +4,7 @@
 </head>
 <body>
   <?php 
-$localhost = "localhost"; #localhost
-$dbusername = "root"; #username of phpmyadmin
-$dbpassword = "";  #password of phpmyadmin
-$dbname = "test";  #database name
-  
-#connection string
-$conn = mysqli_connect($localhost,$dbusername,$dbpassword,$dbname);
-  
+$include 'databaseconnect.php';
 if (isset($_POST["submit"]))
  {
      #retrieve file title
@@ -31,7 +24,7 @@ $uploads_dir = '../images';
     #sql query to insert into database
     $sql = "INSERT into test(title,path) VALUES('$title','$pname')";
   
-    if(mysqli_query($conn,$sql)){
+    if(mysqli_query($db,$sql)){
   
     echo "File Sucessfully uploaded";
     }
@@ -40,7 +33,7 @@ $uploads_dir = '../images';
     }
 }
   $q = "select * from test";
-    $res = mysqli_query($conn,$q);
+    $res = mysqli_query($db,$q);
     while($row = mysqli_fetch_array($res)){
         echo '
         <img src= "data:image/jpeg;base64,'.base64_encode($row['path']).'" height = "400" width = "400"/>

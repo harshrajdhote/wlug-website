@@ -97,7 +97,8 @@
                        
                     
                      <?php
-                    $db = mysqli_connect("localhost", "root", "", "wlug");
+					 include 'databaseconnect.php';
+//                    $db = mysqli_connect("localhost", "root", "", "wlug");
                     $result = mysqli_query($db, "SELECT * FROM gallery where category ='".$_GET['cat']."'");
                    
     while ($row = mysqli_fetch_array($result)) {

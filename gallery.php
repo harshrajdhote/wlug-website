@@ -20,7 +20,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Introducing Lollipop, a sweet new take on Android.">
+    <meta name="description" content="Walchand Linux Users' Group is a club which promotes open source technologies. WLUG established in 2003, is an active technical club. It is a group formed by open source enthusiastic students to use and promote Linux future and interesting stuff.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <title>Events</title>
 

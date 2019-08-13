@@ -1,266 +1,95 @@
-<style>
-* {
-  box-sizing: border-box
-}
-html, body {
-  height: 100%
-}
-body {
-	font: 11px "Open Sans", sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	margin: auto;
-  display: flex;
-  flex-flow: column nowrap;
-  
-  justify-content: space-between
-}
-ul {
-  list-style: none
-}
-a {
-  text-decoration: none
-}
-.generic-anchor {
-	color: #8DB9ED;
-	&:visited {
-		color: #8DB9ED
-	}
-	&:hover {
-		color: #ccc
-	}
-}
-.flex-rw {
-  display: flex;
-  flex-flow: row wrap;
-}
-//This main is mostly to push the footer to the bottom and for demo purposes.
-main {
-  flex: 1 1 auto; //For IE11
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font: 10em "Oswald", sans-serif;
-  color: rgb(155,155,155);
-  line-height: 1
-}
-footer {
-  background: rgb(55,55,55);
-  margin-top: auto;
-  width: 100%
-}
-.footer-list-top {
-  width: 50%
-}
-.footer-list-top > li {
-  text-align: center;
-  padding-bottom: 10px
-}
-.footer-list-header {
-  padding: 10px 0 5px 0;
-  color: #fff;
-  font: 2.3vw "Oswald", sans-serif
-}
-.footer-list-anchor {
-  font: 1.3em "Open Sans", sans-serif
-}
-.footer-social-section {
-  width: 100%;
-  align-items: center;
-  justify-content: space-around;
-  position: relative;
-  margin-top: 5px;
-}
-.footer-social-section::after {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  top: 50%;
-  left: 10px;
-  border-top: 1px solid #ccc;
-  width: calc(100% - 20px)
-}
-.footer-social-overlap {
-  position: relative;
-  z-index: 2;
-  background: rgb(55,55,55);
-  padding: 0 20px
-}
-.footer-social-connect {
-  display: flex;
-  align-items: center;
-  font: 3.5em "Oswald", sans-serif;
-  color: #fff
-}
-.footer-social-small {
-  font-size: 0.6em;
-  padding: 0px 20px
-}
-.footer-social-overlap > a {
-  font-size: 3em
-}
-.footer-social-overlap > a:not(:first-child) {
-  margin-left: 0.38em
-}
-.footer-bottom-section {
-  width: 100%;
-  padding: 10px;
-  border-top: 1px solid #ccc;
-  margin-top: 10px
-}
-.footer-bottom-section > div:first-child {
-  margin-right: auto
-}
-.footer-bottom-wrapper {
-  font-size: 1.5em;
-  color: #fff
-}
-.footer-address {
-  display: inline;
-  font-style: normal
-}
-@media only screen and (max-width: 768px) {
-  .footer-list-header {
-    font-size: 2em
-  }
-  .footer-list-anchor {
-    font-size: 1.1em
-  }
-  .footer-social-connect {
-    font-size: 2.5em
-  }
-  .footer-social-overlap > a {
-    font-size: 2.24em
-  }
-  .footer-bottom-wrapper {
-    font-size: 1.3em
-  }
-}
-@media only screen and (max-width: 568px) {
-  main {
-    font-size: 5em
-  }
-  .footer-list-top {
-    width: 100%
-  }
-  .footer-list-header {
-    font-size: 3em;
-  }
-  .footer-list-anchor {
-    font-size: 1.5em
-  }
-  .footer-social-section {
-    justify-content: center
-  }
-  .footer-social-section::after {
-    top: 25%
-  }
-  .footer-social-connect {
-    margin-bottom: 10px;
-    padding: 0 10px
-  }
-  .footer-social-overlap {
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+    
+   
+
+  <style>
+
+
+       body {
     display: flex;
-    justify-content: center;
-  }
-  .footer-social-icons-wrapper {
-    width: 100%;
-    padding: 0
-  }
-  .footer-social-overlap > a:not(:first-child) {
-    margin-left: 20px;
-  }
-  .footer-bottom-section {
-    padding: 0 5px 10px 5px
-  }
-  .footer-bottom-wrapper {
-    text-align: center;
-    width: 100%;
-    margin-top: 10px
-  }
-}
-@media only screen and (max-width: 480px) {
-  .footer-social-overlap > a {
-    margin: auto
-  }
-  .footer-social-overlap > a:not(:first-child) {
-    margin-left: 0;
-  }
-  .footer-bottom-rights {
-    display: block
-  }
-}
-@media only screen and (max-width: 320px) {
-  .footer-list-header {
-    font-size: 2.2em
-  }
-  .footer-list-anchor {
-    font-size: 1.2em
-  }
-  .footer-social-connect {
-    font-size: 2.4em
-  }
-  .footer-social-overlap > a {
-    font-size: 2.24em
-  }
-  .footer-bottom-wrapper {
-    font-size: 1.3em
-  }
-}
+    min-height: 100vh;
+    flex-direction: column;
 
-    
-</style>
-
-
-
-<main>
-    
-  </main>
-<!--Some of this HTML is directly from Pavilion.  You can change it to whatever you want if you want to mimic this design.-->
-<footer class="flex-rw">
+  }
   
-  <ul class="footer-list-top">
-    <li>
-      <h4  class="footer-list-header">Our Pages</h4></li>
-    <li><a href='/shop/about-mission' class="generic-anchor footer-list-anchor" itemprop="significantLink">HOME</a></li>
-    <li><a href='/promos.html' class="generic-anchor footer-list-anchor" itemprop="significantLink">EVENTS</a></li>
-    <li><a href='/retailers/new-retailers.html' class="generic-anchor footer-list-anchor" itemprop="significantLink">CLUB SERVICE</a></li>
 
-    <li><a href='/job-openings.html' itemprop="significantLink" class="generic-anchor footer-list-anchor">OUR TEAM</a></li>
+  main {
+    flex: 1 0 auto;
 
-    <li><a href='/shop/about-show-schedule' class="generic-anchor footer-list-anchor" itemprop="significantLink">GALLERY </a></li>
-    <li><a href='/shop/about-show-schedule' class="generic-anchor footer-list-anchor" itemprop="significantLink">CONTACT </a></li>
+  }
+	.td{width:50%;
+	}
+  .page-footer{
+    background-color: grey;
+  }
+  .page-footer{padding-top:20px;color:#fff;background-color:grey}.page-footer .footer-copyright{overflow:hidden;min-height:50px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;padding:10px 0px;color:rgba(255,255,255,0.8);background-color:rgba(51,51,51,0.08)}
+	.container{margin:0 auto;max-width:1280px;width:90%}@media only screen and (min-width: 601px){.container{width:85%}}@media only screen and (min-width: 993px){.container{width:70%}}.col .row{margin-left:-.75rem;margin-right:-.75rem}
+  .col .row{margin-left:-.75rem;margin-right:-.75rem}
+  .row:after{content:"";display:table;clear:both}.row .col{float:left;-webkit-box-sizing:border-box;box-sizing:border-box;padding:0 .75rem;min-height:1px}.row .col[class*="push-"],.row .col[class*="pull-"]{position:relative}
+  .row .col.s12{width:100%;margin-left:auto;left:auto;right:auto}
+  .white-text{color:#fff !important}
+  .grey-text{color:#9e9e9e !important}
+  .grey.lighten-4{background-color:#f5f5f5 !important}.grey-text.text-lighten-4{color:#f5f5f5 !important}
+  .row .col.offset-l2{margin-left:16.6666666667%}
+  .grey.lighten-3{background-color:#eee !important}.grey-text.text-lighten-3{color:#eee !important}
+  .footer-copyright{overflow:hidden;min-height:50px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;padding:10px 0px;color:rgba(255,255,255,0.8);background-color:rgba(51,51,51,0.08)}
+  .container{margin:0 auto;max-width:1280px;width:90%}@media only screen and (min-width: 601px){.container{width:85%}}@media only screen and (min-width: 993px){.container{width:70%}}
+  table,th,td{border:none}table{width:100%;display:table;border-collapse:collapse;border-spacing:0}table.striped tr{border-bottom:none}table.striped>tbody>tr:nth-child(odd){background-color:rgba(242,242,242,0.5)}table.striped>tbody>tr>td{border-radius:0}table.highlight>tbody>tr{-webkit-transition:background-color .25s ease;transition:background-color .25s ease}table.highlight>tbody>tr:hover{background-color:rgba(242,242,242,0.5)}table.centered thead tr th,table.centered tbody tr td{text-align:center}tr{border-bottom:1px solid rgba(0,0,0,0.12)}td,th{padding:15px 5px;display:table-cell;text-align:left;vertical-align:middle;border-radius:2px}@media only screen and (max-width: 992px){table.responsive-table{width:100%;border-collapse:collapse;border-spacing:0;display:block;position:relative}table.responsive-table td:empty:before{content:'\00a0'}table.responsive-table th,table.responsive-table td{margin:0;vertical-align:top}table.responsive-table th{text-align:left}table.responsive-table thead{display:block;float:left}table.responsive-table thead tr{display:block;padding:0 10px 0 0}table.responsive-table thead tr th::before{content:"\00a0"}table.responsive-table tbody{display:block;width:auto;position:relative;overflow-x:auto;white-space:nowrap}table.responsive-table tbody tr{display:inline-block;vertical-align:top}table.responsive-table th{display:block;text-align:right}table.responsive-table td{display:block;min-height:1.25em;text-align:left}table.responsive-table tr{border-bottom:none;padding:0 10px}table.responsive-table thead{border:0;border-right:1px solid rgba(0,0,0,0.12)}}
+  </style>
+</head>
+<body>
+          
+		  
+		  <footer class="page-footer">
+		  <table>
+		  <td>
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h4 class="white-text">WLUG</h4>
+                  <h5 class="white-text">COMMUNITY | KNOWLEDGE | SHARE</h5>
+                <p class="grey-text text-lighten-4">Walchand Linux Users' Group is a club which promotes open source technologies. WLUG established in 2003, is an active technical club. It is a group formed by open source enthusiastic students to use and promote Linux future and intresting stuff.</p>
+              </div>
+			  
+			  
+			  </td>
+			  <td>
+			  
+          
+		   <div class="col l4 offset-l2 s12">
+        <style type="text/css">
+          a{
+            text-decoration: none;
+          }
+        </style>
+                <h5 class="white-text">Our Pages</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="events.php">Events</a></li>
+                  <li><a class="grey-text text-lighten-3" href="clubservice.php">Club Service</a></li>
+                  <li><a class="grey-text text-lighten-3" href="gallery.php">Gallery</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Contact Us</a></li>
+                </ul>
+                <h5 class="white-text">For Queries and Feedback</h5>
+                <p class="grey-text text-lighten-4">
+                Shashank Walke :+91 9834395203<br>
+                Email:wce.wlugclub@gmail.com</p>
+              </div>
+		  </div>
+		  </div>
+			  </td>
+		  </table>
+		   <div class="footer-copyright">
+            <div class="container">
+            All Rights Reserved. © 2019 WCE WLUG
+           <!--  <a class="grey-text text-lighten-4 right" href="#!">More Links</a> -->
+            </div>
+          </div>
+        </footer>
+		 
       
-  </ul>
-  
-  <ul class="footer-list-top">
-    <li id='help'>
-      <h4 class="footer-list-header">Please Help Me</h4></li>
-    <li><a href='/shop/about-contact' class="generic-anchor footer-list-anchor" itemprop="significantLink">CONTACT</a></li>
-    <li><a href='/faq.html' class="generic-anchor footer-list-anchor" itemprop="significantLink">FAQ</a></li>
-    <li id='find-a-store'><a href='/shop/store-locator' class="generic-anchor footer-list-anchor" itemprop="significantLink">STORE LOCATOR</a></li>
-    <li id='user-registration'><a href='/shop/user-registration?URL=' class="generic-anchor footer-list-anchor" itemprop="significantLink">NEW USERS</a></li>
-    <li id='order-tracking'><a href='/shop/order-status' itemprop="significantLink" class="generic-anchor footer-list-anchor">ORDER STATUS</a></li>
-  </ul>
-  <section class="footer-social-section flex-rw">
-      <span class="footer-social-overlap footer-social-connect">
-      CONNECT <span class="footer-social-small">with</span> US
-      </span>
-      <span class="footer-social-overlap footer-social-icons-wrapper">
-      <a href="https://www.pinterest.com/paviliongift/" class="generic-anchor" target="_blank" title="linked in" itemprop="significantLink"><i class="fa fa-linkedin"></i></a>
-      <a href="https://www.facebook.com/paviliongift" class="generic-anchor" target="_blank" title="Facebook" itemprop="significantLink"><i class="fa fa-facebook"></i></a>
-      <a href="https://twitter.com/PavilionGiftCo" class="generic-anchor" target="_blank" title="Twitter" itemprop="significantLink"><i class="fa fa-twitter"></i></a>
-      <a href="http://instagram.com/paviliongiftcompany" class="generic-anchor" target="_blank" title="Instagram" itemprop="significantLink"><i class="fa fa-instagram"></i></a>
-      <a href="https://www.youtube.com/channel/UCYgUODvd0qXbu_LkUWpTVEg" class="generic-anchor" target="_blank" title="Youtube" itemprop="significantLink"><i class="fa fa-youtube"></i></a>
-      <a href="https://plus.google.com/+Paviliongift/posts" class="generic-anchor" target="_blank" title="Google Plus" itemprop="significantLink"><i class="fa fa-google-plus"></i></a>
-      </span>
-  </section>
-  <section class="footer-bottom-section flex-rw">
-<div class="footer-bottom-wrapper">   
-<i class="fa fa-copyright" role="copyright">
- 
-</i> 2019  <address class="footer-address" role="company address"></address><span class="footer-bottom-rights">  </span>
-    </div>
-    
-  </section>
-</footer>
+</body>
+</html>
+        

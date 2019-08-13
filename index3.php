@@ -20,19 +20,11 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Walchand Linux Users' Group is a club which promotes open source technologies. WLUG established in 2003, is an active technical club. It is a group formed by open source enthusiastic students to use and promote Linux future and interesting stuff.">
+    <meta name="description" content="Introducing Lollipop, a sweet new take on Android.">
 	   <link href='https://fonts.googleapis.com/css?family=Exo' rel='stylesheet'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <title>WLUG</title>
       
-      
-      <!--pathak's footer-->
-      <link rel="stylesheet" href="css/demo.css">
-	<link rel="stylesheet" href="css/footer-distributed-with-address-and-phones.css">
-	
-	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-
-	<link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
       
       
       
@@ -45,10 +37,10 @@
     <style>
         
         
-      /*  /////////
+        /////////
         $color-primary: #f857a8;
 $color-secondary:#ff5858;
-$color-dark: #333;*/
+$color-dark: #333;
 
 @mixin main-gradient{
     background: $color-primary;
@@ -111,7 +103,6 @@ h1{
       bottom: 0;
       margin-right: 40px;
       margin-bottom: 40px;
-
       z-index: 900;
     }
         .android-customized-section-image {
@@ -382,19 +373,12 @@ typewriter.type();
         ?> 
 
 
-       <?php
-        include 'foot.php';
-        ?>
+       <!-- <?php
+       // include 'footer.php';
+       // ?>-->
       </div>
     </div>
-    <a href="./feedback.php" target="_blank" id="view-source"  style = "position: fixed;
-      display: block;
-      right: 0;
-      bottom: 0;
-      margin-right: 40px;
-      margin-bottom: 40px;
-     
-      z-index: 900;"class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast" >Feedback</a>
+    <a href="./feedback.php" target="_blank" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast">Feedback</a>
     <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
   </body>
 </html>
