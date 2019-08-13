@@ -64,8 +64,8 @@ body{
             margin-top: 0px;
         }
 		
-  <!-- border: 1px solid black; -->
-}
+  /*border: 1px solid black; */
+
         .navbar-default .navbar-nav > li > a{
             padding: 15px 15px;
             margin: 5px 0;
@@ -139,11 +139,12 @@ body{
     
         <div class="android-more-section" style="left-margin:20px;">
           <div class="android-section-title mdl-typography--display-1-color-contrast">Recent Activities</div>
-    
-                                    <div class="android-card-container mdl-grid" style="left-margin:20px;">
-            <div style="height:420px;" class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
-              <div class="card-container">
-                  
+    <div clas = "container">
+                                    
+           
+              
+                     <div class = "row">
+                         <div class="col-sm-10 col-sm-offset-1">
                   <?php
                   
                   $db = mysqli_connect("localhost", "root", "", "wlug");
@@ -155,7 +156,7 @@ $result = mysqli_query($db, "SELECT * FROM members where category ='".$_GET['cat
                   
                   
                   
-                  
+               
                   
 while ($row = mysqli_fetch_array($result)) {
 //      echo "<div id='img_div'>";
@@ -166,8 +167,8 @@ while ($row = mysqli_fetch_array($result)) {
  
                   
                   
-                  
-                  
+               /*   
+                  echo "<div class='col-md-4 col-sm-6'><div class='card-container'>";
                 echo "<div class='card'>";
                 echo "<div class='front'>";
                         echo "<div class='cover'>";
@@ -206,42 +207,83 @@ while ($row = mysqli_fetch_array($result)) {
                             echo "<div class='social-links text-center'>";
     
                                 echo "<a href='".$row['fb']."' class='facebook'><i class='fa fa-facebook fa-fw'></i></a>";
-                                echo "<a href='mailto:".$row['email']."' target='blank' class='google' onclick='location.replace('mailto:".$row['email']."');'><i class='fa fa-google-plus fa-fw'></i></a>";
+                                echo "<a href='mailto:".$row['gmail']."' target='blank' class='google' onclick='location.replace('mailto:".$row['gmail']."');'><i class='fa fa-google-plus fa-fw'></i></a>";
                                 echo "<a href='".$row['linked_in']."' class='linkedin'><i class='fa fa-linkedin'></i></a>";
                             echo "</div>";
                         echo "</div>";
                     echo "</div>"; 
-                echo "</div>";
+                echo "</div></div></div></div></div>";*/
+    echo"<div class='col-md-4 col-sm-6'>
+             <div class='card-container'>
+                <div class='card'>
+                    <div class='front'>
+                        <div class='cover'>
+                            <img src='images/rotating_card_thumb2.png'/>
+                        </div>
+                        <div class='user'>";
+                            echo "<img class='img-circle' src='../images/members/".$row['img']."'/>
+                        </div>
+                        <div class='content'>
+                            <div class='main'>";
+                                echo "<h3 class='name'>".$row['name']."</h3>";
+                                echo "<p class='profession'>".$row['post']."</p>";
+                                echo "<p class='text-center'>".$row['thought']."</p>
+                            </div>;
+                            <div class='footer'>
+                                <i class='fa fa-mail-forward'></i> More
+                            </div>
+                        </div>
+                    </div> 
+                    <div class='back'>
+                        <div class='header'>
+                            <h5 class='motto'>COMMUNITY | KNOWLEDGE | SHARE</h5>
+                        </div>
+                        <div class='content'>
+                            <div class='main'>";
+                               echo "<h4 class='text-center'>".$row['post']."</h4>";
+                                echo "<p class='text-center'>".$row['AOI']."</p>
+
+                               
+
+                            </div>
+                        </div>
+                        <div class='footer'>
+                            <div class='social-links text-center'>";
+                                echo "<a href='".$row['fb']."' class='facebook'><i class='fa fa-facebook fa-fw'></i></a>";
+                                echo "<a href='mailto:".$row['gmail']."' target='blank' class='google' onclick='location.replace('mailto:".$row['gmail']."');'><i class='fa fa-google-plus fa-fw'></i></a>";
+                                echo "<a href='".$row['linked_in']."' class='linkedin'><i class='fa fa-linkedin'></i></a>
+                            </div>
+                        </div>
+                    </div> 
+                </div> 
+            </div> 
+        </div>";
 }
                   
                     ?>
                   
-                  
+                                        
                   
                     <!-- end card -->
-            </div> <!-- end card-container -->
+             <!-- end card-container -->
             </div>
 
-            
-
-
             </div>
+
+
+           
                                  
                                  
                                 
           
 
-
+                                       
           </div>
         </div>
 
-        <?php
-            
-            include 'footer.php';
-        ?>
       </div>
-    
-    
+      </div>
+      </div>
     <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
   </body>
 </html>
